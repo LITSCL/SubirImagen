@@ -17,7 +17,7 @@ import cl.litscl.subirimagen.util.ArchivoUtil;
  * Servlet implementation class ImagenControlador
  */
 
-@MultipartConfig //La anotaci�n "MultipartConfig", prepara el Servlet para poder recepcionar archivos.
+@MultipartConfig //La anotación "MultipartConfig", prepara el Servlet para poder recepcionar archivos.
 @WebServlet("/ImagenControlador")
 public class ImagenControlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -47,7 +47,7 @@ public class ImagenControlador extends HttpServlet {
 	    String[] formatosSoportados = {".ico", ".png", ".jpg", ".jpeg"};
 		
 		if (archivo.getSubmittedFileName().equals("") == true) {
-			request.setAttribute("mensaje", "No se ha enviado ning�n archivo");
+			request.setAttribute("mensaje", "No se ha enviado ningún archivo");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 		else if (new ArchivoUtil().validarFormato(archivo.getSubmittedFileName(), formatosSoportados)) {
