@@ -20,5 +20,4 @@ public class CadenaUtil {
     protected int numeroAleatorioEnRango(int minimo, int maximo) {
         return ThreadLocalRandom.current().nextInt(minimo, maximo + 1);
     }
-    
 }
